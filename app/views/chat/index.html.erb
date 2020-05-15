@@ -1,0 +1,52 @@
+<div class="container-wide">
+  <div class="page-title">
+      <div class="row gutters">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <h5 class="title">Rails Chat Example</h5>
+          </div>
+      </div>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="row gutters">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card m-0">
+          <div class="row no-gutters">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3 users-area">
+              <div class="users-container">
+                <ul class="users">
+                  <li class="person" data-chat="person1">
+                    <div class="user">
+                      <img src="https://www.bootdey.com/img/Content/avatar/avatar1.png" alt="Retail Admin">
+                      <span class="status offline"></span>
+                    </div>
+                    <p class="name-time">
+                      <span class="name">Charlie Bronson</span>
+                      <span class="time">05/15/2020</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
+              <div class="selected-user">
+                  <span>To: <span class="name">Charlie Bronson</span></span>
+              </div>
+              <div class="chat-container">
+                <ul class="chat-box chatContainerScroll">
+                    
+                </ul>
+                <div class="form-group mt-3 mb-0">
+                <%= form_for @message, remote: true do |f| %>
+                  <%= f.text_area :content, class: "form-control", rows: "3", placeholder: "Type your message here..." %>
+                  <%= submit_tag("Send") %>
+                <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
